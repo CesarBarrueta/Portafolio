@@ -1,0 +1,55 @@
+<header>
+    <img id="SAFI-Logo" width="90" alt="SAFI Logo" src="./assets/pp.jpg" />
+    <h1>CANSAT V2</h1>
+    <img id="UAEM-Logo" width="95" alt="UAEM Logo" src="./assets/Logo_UAEM.png" />
+</header>
+
+<app-aside></app-aside>
+
+<section class="graficas">
+    <div class="renglon_1">
+        <div class="grafica" id="temp">
+            <app-temperatura></app-temperatura>
+        </div>
+        <div class="grafica" id="pres">
+            <app-grafica-presion></app-grafica-presion>
+        </div>
+    </div>
+
+    <div class="renglon_2">
+        <div class="grafica" id="altura">
+            <app-grafica-altura></app-grafica-altura>
+        </div>
+        <div class="grafica" id="aceleracion">
+            <app-grafica-aceleracion></app-grafica-aceleracion>
+        </div>
+    </div>
+
+    <div class="renglon_3">
+        <div class="grafica" id="vel_angular">
+            <app-grafica-vel-angular></app-grafica-vel-angular>
+        </div>
+        <div class="grafica" id="inclinacion">
+            <app-grafica-inclinacion></app-grafica-inclinacion>
+        </div>
+    </div>
+    
+<div class="tabla">
+    <table class="resumen">
+        <caption id="table_title">Resumen de vuelo</caption>
+        <tr>
+            <td>Altura máxima</td>
+            <td>Presión</td>
+            <td>Temperatura máxima</td>
+        </tr>
+        <tr>
+            <td>500</td>
+            <td>500</td>
+            <td>500</td>
+        </tr>
+    </table>
+</div>
+</section>
+
+
+

@@ -1,0 +1,24 @@
+<aside class="aside">
+
+    <div id="estado">
+        <mat-form-field appearance="fill">
+          <mat-label>Puerto</mat-label>
+          <mat-select>
+            <mat-option *ngFor="let food of foods" [value]="food.value">
+              {{food.viewValue}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+    </div>
+
+    <div id="slide">
+    <mat-slide-toggle color = "primary">
+        <label>Estado</label>
+    </mat-slide-toggle>
+    </div>
+
+    <div id="export">
+        <a href="">Exportar datos</a>
+    </div>
+
+</aside>
