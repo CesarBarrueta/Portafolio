@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js"></script>
+    <link href="styles.css" rel="stylesheet"/>
+    <title>Calculadora</title>
+</head>
+<body>
+    <div id="calculadora">
+        <div id="pantalla">
+            <b class="panel"></b>
+        </div>
+        <div id="flex-panel">
+            <b id="clear" class="boton" onclick="clear_pantalla()">C</b>
+            <b class="operation boton" onclick="operacion('/')">/</b>
+            <b class="operation boton" onclick="operacion('*')">*</b>
+            <b class="operation boton" onclick="operacion('%')">%</b>
+            <b class="number boton" onclick="agregar_num('7')">7</b>
+            <b class="number boton" onclick="agregar_num('8')">8</b>
+            <b class="number boton" onclick="agregar_num('9')">9</b>
+            <b class="operation boton" onclick="operacion('-')">-</b>
+            <b class="number boton" onclick="agregar_num('4')">4</b>
+            <b class="number boton" onclick="agregar_num('5')">5</b>
+            <b class="number boton" onclick="agregar_num('6')">6</b>
+            <b class="operation boton" onclick="operacion('+')">+</b>
+            <div id="flex-flex-container">
+                <b class="number boton" onclick="agregar_num('1')">1</b>
+                <b class="number boton" onclick="agregar_num('2')">2</b>
+                <b class="number boton" onclick="agregar_num('3')">3</b>
+                <b class="operation boton" onclick="agregar_num('.')">.</b>
+                <b class="number boton" onclick="agregar_num('0')">0</b>
+                <b class="operation boton" onclick="agregar_num('00')">00</b>
+            </div>
+            <div id="equal-flexbox">
+                <b id="equal" class="boton" onclick="equal()">=</b>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
