@@ -1,0 +1,30 @@
+version: '3'
+volumes:
+  respaldo_pokedex:
+services:
+  www:
+    image: php:apache
+    volumes:
+      - "./:/var/www/html"
+    ports:
+      - 80:80
+      - 443:443
+    environment:
+      - PHP_PDO_MYSQL_VERSION=latest
+    command: bash -c "docker-php-ext-install pdo pdo_mysql && apache2-foreground"
+  db:
+    image: mysql:latest
+    environment:
+      - MYSQL_ROOT_PASSWORD=password
+      - MYSQL_DATABASE=favorite_pokemon
+      - MYSQL_USER=cesar
+      - MYSQL_PASSWORD=12345678
+    volumes:
+      - "respaldo_pokedex:/var/lib/mysql"
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    ports: 
+      - 8001:80
+    environment:
+      - PMA_HOST=db
+      - PMA_PORT=3306

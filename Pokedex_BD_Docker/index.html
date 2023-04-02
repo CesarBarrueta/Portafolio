@@ -1,0 +1,95 @@
+<!DOCTYPE html >
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/styles.css" rel="stylesheet">
+    <title>Pokédex</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    <script src="/script.js"></script>
+</head>
+<body onload="mostrarFav()">
+    <div id="container">
+        <div id="left">
+            <div id="title_num">
+                <b id="name"></b>
+                <b id="id"></b>
+            </div>
+            <div id="contenedor_sprite">
+                <img id="sprite" src="https://i.gifer.com/origin/28/2860d2d8c3a1e402e0fc8913cd92cd7a_w200.gif">
+            </div>
+            <div id="contenedor_descripcion">
+                <p id="descripcion"></p>
+            </div>
+        </div>
+        
+        <div id="right">
+            <div id="contenedor_caracteristicas">
+                <div id="stats">
+                    <b id="hp">hp...................</b>
+                    <br>
+                    <b id="attack">attack...............</b>
+                    <br>
+                    <b id="defense">defense..............</b>
+                    <br>
+                    <b id="special-attack">special-attack.......</b>
+                    <br>
+                    <b id="special-defense">special-defense......</b>
+                    <br>
+                    <b id="speed">speed................</b>
+                </div>
+                <div id="contenedor_tipos">
+                    <div id="caja_tipos_titulo"><b id="texto_tipos">TIPOS</b></div>
+                    <br>
+                    <div class="caja_tipos"><b id= "tipo1">Tipo 1</b></div>
+                    <br>
+                    <div class="caja_tipos"><b id= "tipo2">Tipo 2</b></div>
+                </div>
+            </div>
+            <div id="contenedor_habilidades">
+                <div id="habilidad1">
+                    <div class="texto_habilidad_texto"><b>Habilidad 1</b></div>
+                    <br>
+                    <div class="texto_habilidad"><b class="habilidad"></b></div>
+                </div>
+                <div id=habilidad2>
+                    <div class="texto_habilidad_texto"><b>Habilidad 2</b></div>
+                    <br>
+                    <div class="texto_habilidad"><b class="habilidad"></b></div>
+                </div>
+            </div>
+            <div id="contenedor_botones">
+                <div class="button" onclick="buscarPokemon()"><b>Buscar Pokemon</b></div>
+
+                <form method="POST" action="/WebService/index.php">
+                    <input type="text" name="id" hidden>
+                    <input type="text" name="nombre" hidden>
+                    <input type="text" name="sprite" hidden>
+                    <input type="text" name="hp" hidden>
+                    <input type="text" name="attack" hidden>
+                    <input type="text" name="defense" hidden>
+                    <input type="text" name="special_attack" hidden>
+                    <input type="text" name="special_defense" hidden>
+                    <input type="text" name="speed" hidden>
+                    <input type="text" name="tipo1" hidden>
+                    <input type="text" name="tipo2" hidden>
+                    <input type="submit" value="Guardar Pokemon">
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+    <div id="container_favoritos">
+        <h1>Pokemon Guardados</h1>
+        <br>
+        <div id="container_saved">
+
+        </div>
+    </div>
+
+</body>
+</html>
