@@ -1,0 +1,26 @@
+.button{
+    background-color: #301860;
+    color: white;
+    font-size: 24px;
+    padding: 1em;
+    margin: 10px;
+    gap: 10px;
+    flex-basis: 50%;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 10px;
+    font-weight: 500;
+}
+
+.button:hover{
+    background-color: #483078;
+}
+
+
+
+#button-container{
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+
+}
